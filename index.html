@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Savitha L | Data Analytics Portfolio</title>
+    <title>SAVITHA L | Data Analytics Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -35,22 +35,7 @@
             color: #eaf1ff;
         }
 
-        /* Resume Button */
-        .resume-btn {
-            background-color: #34A853; /* Google Green */
-            color: white;
-            border: none;
-            padding: 12px 22px;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .resume-btn:hover {
-            background-color: #2c8e46;
-        }
-
+        
         /* Layout */
         .container {
             max-width: 1100px;
@@ -94,7 +79,7 @@
         }
 
         .contact-info a {
-            color: #4285F4;
+            color: #3265f0;
             text-decoration: none;
         }
 
@@ -149,7 +134,7 @@
             <br>
             Passionate about transforming raw data into meaningful insights using analytics, dashboards, and data-driven decision making.
         </p>
-        <button class="resume-btn" onclick="openForm()">Download Resume</button>
+        
     </div>
 
     <div class="container">
@@ -234,46 +219,14 @@
         © 2026 Savitha L | Data Analytics Portfolio
     </footer>
 
-    <!-- Resume Popup -->
-    <div id="resumeForm" class="popup">
-        <div class="popup-content">
-            <h3>Download Resume</h3>
-            <input type="text" id="name" placeholder="Your Name">
-            <input type="email" id="email" placeholder="Your Email">
-            <button class="resume-btn" onclick="downloadResume()">Submit & Download</button>
-            <button onclick="closeForm()">Cancel</button>
-        </div>
-    </div>
+    
+    
 
-    <script>
-        function openForm() {
-            document.getElementById("resumeForm").style.display = "block";
-        }
-
-        function closeForm() {
-            document.getElementById("resumeForm").style.display = "none";
-        }
-
-        function downloadResume() {
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-
-            if (name === "" || email === "") {
-                alert("Please enter your details");
-                return;
-            }
-
-            const link = document.createElement("a");
-            link.href = "Savitha_resume.pdf";
-            link.download = "Savitha_resume.pdf";
-            link.click();
-
-            closeForm();
-        }
-    </script>
-
+ 
 </body>
 </html>
+
+
 
 
 
