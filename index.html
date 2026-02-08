@@ -1,132 +1,278 @@
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #f5f8fc;
-        color: #333;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Savitha L | Data Analytics Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* Header */
-    .header {
-        background-color: #4285F4; /* Google Blue */
-        text-align: center;
-        padding: 60px 20px;
-        color: white;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f8fc;
+            color: #333;
+        }
 
-    .header h1 {
-        margin: 0;
-        font-size: 42px;
-    }
+        /* Header */
+        .header {
+            background-color: #4285F4; /* Google Blue */
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
 
-    .header p {
-        margin-top: 10px;
-        font-size: 18px;
-        max-width: 750px;
-        margin-left: auto;
-        margin-right: auto;
-        color: #eaf1ff;
-    }
+        .header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
 
-    /* Resume Button */
-    .resume-btn {
-        background-color: #34A853; /* Google Green */
-        color: white;
-        border: none;
-        padding: 12px 22px;
-        font-size: 16px;
-        border-radius: 6px;
-        cursor: pointer;
-        margin-top: 20px;
-    }
+        .header p {
+            margin-top: 10px;
+            font-size: 18px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #eaf1ff;
+        }
 
-    .resume-btn:hover {
-        background-color: #2c8e46;
-    }
+        /* Resume Button */
+        .resume-btn {
+            background-color: #34A853; /* Google Green */
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
 
-    /* Layout */
-    .container {
-        max-width: 1100px;
-        margin: auto;
-        padding: 40px 20px;
-    }
+        .resume-btn:hover {
+            background-color: #2c8e46;
+        }
 
-    .section {
-        background-color: #ffffff;
-        padding: 30px;
-        margin-bottom: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
+        /* Layout */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
 
-    .section h2 {
-        margin-top: 0;
-        color: #4285F4; /* Google Blue */
-    }
+        .section {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
 
-    /* Skills */
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 15px;
-    }
+        .section h2 {
+            margin-top: 0;
+            color: #4285F4;
+        }
 
-    .skill-box {
-        background-color: #E8F0FE; /* Light Google Blue */
-        color: #1967D2;
-        padding: 8px 14px;
-        border-radius: 20px;
-        font-size: 14px;
-    }
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
 
-    /* Contact */
-    .contact-info p {
-        margin: 8px 0;
-        font-size: 16px;
-    }
+        .skill-box {
+            background-color: #E8F0FE;
+            color: #1967D2;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
 
-    .contact-info a {
-        color: #4285F4;
-        text-decoration: none;
-    }
+        /* Contact */
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
 
-    .contact-info a:hover {
-        text-decoration: underline;
-    }
+        .contact-info a {
+            color: #4285F4;
+            text-decoration: none;
+        }
 
-    /* Popup */
-    .popup {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.5);
-    }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
 
-    .popup-content {
-        background: white;
-        max-width: 400px;
-        margin: 120px auto;
-        padding: 25px;
-        border-radius: 10px;
-    }
+        /* Popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
 
-    .popup-content input {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #dadce0;
-        border-radius: 4px;
-    }
+        .popup-content {
+            background: white;
+            max-width: 400px;
+            margin: 120px auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
 
-    footer {
-        text-align: center;
-        padding: 20px;
-        background-color: #E8F0FE;
-        font-size: 14px;
-        color: #1967D2;
-    }
-</style>
+        .popup-content input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #E8F0FE;
+            font-size: 14px;
+            color: #1967D2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>SAVITHA L</h1>
+        <p>
+            Artificial Intelligence and Data Science Student | Data Enthusiast  
+            <br>
+            Passionate about transforming raw data into meaningful insights using analytics, dashboards, and data-driven decision making.
+        </p>
+        <button class="resume-btn" onclick="openForm()">Download Resume</button>
+    </div>
+
+    <div class="container">
+
+        <!-- About -->
+        <div class="section">
+            <h2>About Me</h2>
+            <p>
+                I am a data-focused learner pursuing B.Tech in Artificial Intelligence and Data Science.
+                I have hands-on experience in data cleaning, analysis, and visualization using Power BI,
+                Python, SQL, and Excel. I enjoy building interactive dashboards and extracting insights
+                that support real-world business decisions.
+            </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div class="skill-box">Python</div>
+                <div class="skill-box">SQL</div>
+                <div class="skill-box">Power BI</div>
+                <div class="skill-box">Excel</div>
+                <div class="skill-box">Pandas</div>
+                <div class="skill-box">NumPy</div>
+                <div class="skill-box">Matplotlib</div>
+                <div class="skill-box">Data Analysis</div>
+                <div class="skill-box">Data Visualization</div>
+                <div class="skill-box">Machine Learning</div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <h2>Projects</h2>
+            <h3>Sales Dashboard – Power BI</h3>
+            <p>
+                Built an interactive dashboard with KPIs, yearly trends, and regional insights to analyze sales performance.
+            </p>
+
+            <h3>Starbucks Dashboard – Power BI</h3>
+            <p>
+                Analyzed 214K+ quantity sold and ₹58.87M revenue using category-wise and monthly trend dashboards.
+            </p>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <h2>Experience</h2>
+            <p><strong>Data Analyst Intern – Assistlana, Puducherry</strong></p>
+            <ul>
+                <li>Created dashboards for Amazon, Netflix, Starbucks, and sales datasets</li>
+                <li>Performed data cleaning, modeling, and visualization</li>
+                <li>Used Python, SQL, Excel, and Power BI</li>
+            </ul>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2>Education</h2>
+            <p>
+                <strong>B.Tech – Artificial Intelligence & Data Science (2023–2027)</strong><br>
+                Mailam Engineering College<br>
+                CGPA: <strong>9.31</strong>
+            </p>
+        </div>
+
+        <!-- Contact -->
+        <div class="section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>📍 Villupuram, Tamil Nadu</p>
+                <p>📞 +91 81480 51597</p>
+                <p>📧 <a href="mailto:savithakavina@gmail.com">savithakavina@gmail.com</a></p>
+                <p>🔗 <a href="https://www.linkedin.com/in/savitha-l" target="_blank">LinkedIn</a></p>
+                <p>💻 <a href="https://github.com/savitha-analytics" target="_blank">GitHub</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Savitha L | Data Analytics Portfolio
+    </footer>
+
+    <!-- Resume Popup -->
+    <div id="resumeForm" class="popup">
+        <div class="popup-content">
+            <h3>Download Resume</h3>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <button class="resume-btn" onclick="downloadResume()">Submit & Download</button>
+            <button onclick="closeForm()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("resumeForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("resumeForm").style.display = "none";
+        }
+
+        function downloadResume() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+            if (name === "" || email === "") {
+                alert("Please enter your details");
+                return;
+            }
+
+            const link = document.createElement("a");
+            link.href = "Savitha_Resume.pdf";
+            link.download = "Savitha_Resume.pdf";
+            link.click();
+
+            closeForm();
+        }
+    </script>
+
+</body>
+</html>
+
